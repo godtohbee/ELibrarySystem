@@ -112,7 +112,7 @@ class BookCrud():
         if not book:
             raise HTTPException(status_code=404, detail="Book not found")
         # update the availability status of the book
-        if not book.get("is_available", True):
+        if not books.get("is_available", True):
             raise HTTPException(status_code=400, detail="Book is already marked as unavailable")
         book["is_available"] = False
         return {

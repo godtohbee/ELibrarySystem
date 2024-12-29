@@ -64,19 +64,19 @@ e_library_management_system/
         settings.py             manages application configuration
     crud/
         __init__.py             model initialization
-        book_model.py           logic for book-related operations
-        borrow_model.py         logic for borrow-related operations
-        user_model.py           logic for user-related operations
-    routers/
+        books.py                logic for book-related operations
+        borrow.py               logic for borrow-related operations
+        users.py                logic for user-related operations
+    router/
         __init__.py             route initialization
-        books_routers.py        book-related endpoints
-        borrow_routers.py       borrow-related endpoints
-        user_routers.py         user-related endpoints 
+        books.py                book-related endpoints
+        borrow.py               borrow-related endpoints
+        users.py                user-related endpoints 
     schemas/
         __init__.py             services initialization
-        books.py                 book management model
+        books.py                book management model
         borrow.py               borrow management model
-        users.py                 user management model
+        users.py                user management model
     tests/
         __init__.py             test initialization
         books.py                unit tests for book routes

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from routers.users import user_router
-from routers.books import book_router
-from routers.borrow import borrow_router
+from router.users import user_router
+from router.books import book_router
+from router.borrow import borrow_router
 
 
 app = FastAPI()

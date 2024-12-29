@@ -120,4 +120,16 @@ class UserCrud:
             "message": f"User {user_id} has been deactivated successfully."
         }
         
+        
+    @staticmethod
+    def get_user_who_borrowed_books(user_id: UUID):
+        # find borrows for the given user_id
+        user_borrowed_books = [borrow for borrow in borrow_records if borrow[user_id] == user_id]
+        if not user_borrowed_books:
+            raise HTTPException(status_code=404, detail="No borrowed books found for this user")
+        return {
+            "user_id": user_id,
+            "borrowed_books": user_borrowed_books
+        }
+        
 users_crud = UserCrud()
